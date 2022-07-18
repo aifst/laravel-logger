@@ -56,6 +56,9 @@ trait Logger
         });
     }
 
+     /**
+     * @TODO init in you model or trait
+     */
     protected static function loggerUserId()
     {
         return null;
