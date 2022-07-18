@@ -1,0 +1,50 @@
+{
+    "name": "aifst/laravel-logger",
+    "description": "Logger package for Laravel 5.6 and up",
+    "keywords": [
+        "aifst",
+        "laravel",
+        "logger"
+    ],
+    "homepage": "https://github.com/aifst/laravel-logger",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergei Yarmolyuk",
+            "email": "sergei.yarmolyuk@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : "^7.4|^8.0",
+        "illuminate/database": "^6.0|^7.0|^8.0",
+        "nesbot/carbon": "^2.31",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aifst\\Logger\\": "src"
+        },
+        "files": [
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aifst\\Logger\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aifst\\Logger\\LoggerServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

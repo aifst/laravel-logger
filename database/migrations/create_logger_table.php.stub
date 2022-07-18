@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateLoggerTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create(config('logger.table_names.log'), function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigIntege('user_id')->nullable();
+            $table->string('model_type');
+            $table->unsignedBigInteger('model_id');
+            $table->string('action');
+            $table->text('before')->nullable();
+            $table->text('after')->nullable();
+            $table->unsignedInteger('created_at')->nullable();
+
+            $table->index(['model_id', 'model_type']);
+        });
+
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists(config('logger.table_names.logger'));
+    }
+}
