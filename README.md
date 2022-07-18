@@ -10,12 +10,12 @@ composer require "aifst/laravel-logger:^1.0.0"
 ``` bash
 'providers' => [
     // ...
-    Aifst\LoggerServiceProvider::class,
+    Aifst\Logger\LoggerServiceProvider::class,
 ];
 ```
 
 3. You should publish the migration and the config/logger.php config file with:
 
 ``` bash
-php artisan vendor:publish --provider="Aifst\LoggerServiceProvider"
+php artisan vendor:publish --provider="Aifst\Logger\LoggerServiceProvider"
 ```
