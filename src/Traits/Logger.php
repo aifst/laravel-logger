@@ -1,4 +1,4 @@
-y<?php
+<?php
 
 namespace Aifst\Logger\Traits;
 
