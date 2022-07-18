@@ -5,6 +5,6 @@ return [
         'log' => Aifst\Logger\Models\Log::class,
     ],
     'table_names' => [
-        'log' => 'log',
+        'log' => 'logs',
     ]
 ];
