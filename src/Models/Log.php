@@ -12,7 +12,7 @@ class Log extends Model
     /**
      * @var string[]
      */
-    protected $fillable = ['user_id', 'action', 'before', 'after'];
+    protected $fillable = ['user_id', 'action', 'before', 'after', 'model_id', 'model_type'];
 
     /**
      * @param $value
