@@ -72,12 +72,18 @@ trait Logger
      */
     protected function insertNewLog($action, $before, $after)
     {
-        return $this->logs()->save(new Log([
+        $logClass = config('logger.models.log');
+        $log = new $logClass([
+            'model_id' => $this->getKey(),
+            'model_type' => static::class,
             'user_id' => static::loggerUserId(),
             'action' => $action,
             'before' => $before ? json_encode($before) : null,
             'after' => $after ? json_encode($after) : null
-        ]));
+        ]);
+        $log->save();
+
+        return $log;
     }
 
     /**
