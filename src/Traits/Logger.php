@@ -1,6 +1,6 @@
 y<?php
 
-namespace App\Traits;
+namespace Aifst\Logger\Traits;
 
 use Aifst\Logger\Models\Log;
 
@@ -35,7 +35,7 @@ trait Logger
      */
     public function logs()
     {
-        return $this->morphMany('App\Models\Log', 'model');
+        return $this->morphMany(config('logger.models.log'), 'model');
     }
 
     /**
