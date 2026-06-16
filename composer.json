@@ -15,10 +15,10 @@
         }
     ],
     "require": {
-        "php" : "^7.4|^8.0",
-        "illuminate/database": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
-        "nesbot/carbon": "^2.31|^3.0",
-        "ext-json": "*"
+        "php": "^7.4|^8.0",
+        "ext-json": "*",
+        "illuminate/database": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0|^13.0",
+        "nesbot/carbon": "^2.31|^3.0"
     },
     "autoload": {
         "psr-4": {
